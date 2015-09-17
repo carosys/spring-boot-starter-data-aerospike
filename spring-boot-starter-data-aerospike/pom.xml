@@ -19,6 +19,7 @@
 		<main.basedir>${basedir}/../..</main.basedir>
 		<springdata.commons>1.11.0.RELEASE</springdata.commons>
 		<springdata.keyvalue>1.0.0.M1</springdata.keyvalue>
+		<aerospike>3.1.3</aerospike>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -28,8 +29,15 @@
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-aerospike</artifactId>
-			<version>1.0.0.BUILD-SNAPSHOT</version>
+			<scope>system</scope>
+			<version>1.0.0</version>
+			<systemPath>${basedir}/src/lib/spring-data-aerospike-1.0.0.BUILD-SNAPSHOT.jar</systemPath>
 		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>org.springframework.data</groupId> -->
+		<!-- <artifactId>spring-data-aerospike</artifactId> -->
+		<!-- <version>1.0.0.BUILD-SNAPSHOT</version> -->
+		<!-- </dependency> -->
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-commons</artifactId>
@@ -37,7 +45,17 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
 			<artifactId>spring-aspects</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.aerospike</groupId>
+			<artifactId>aerospike-client</artifactId>
+			<version>${aerospike}</version>
 		</dependency>
 	</dependencies>
 </project>
