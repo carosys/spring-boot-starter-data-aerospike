@@ -29,8 +29,8 @@
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-aerospike</artifactId>
-			<scope>system</scope>
 			<version>1.0.0</version>
+			<scope>system</scope>
 			<systemPath>${basedir}/src/lib/spring-data-aerospike-1.0.0.BUILD-SNAPSHOT.jar</systemPath>
 		</dependency>
 		<!-- <dependency> -->
@@ -48,14 +48,38 @@
 			<artifactId>spring-tx</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-keyvalue</artifactId>
+			<version>${springdata.keyvalue}</version>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-aspects</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>com.aerospike</groupId>
 			<artifactId>aerospike-client</artifactId>
 			<version>${aerospike}</version>
 		</dependency>
+		<dependency>
+			<groupId>com.aerospike</groupId>
+			<artifactId>aerospike-helper-java</artifactId>
+			<scope>system</scope>
+			<version>1.0.0</version>
+			<systemPath>${basedir}/src/lib/aerospike-helper-java-1.0.0.jar</systemPath>
+		</dependency>
 	</dependencies>
+	<repositories>
+		<repository>
+			<id>spring-milestone</id>
+			<url>https://repo.spring.io/libs-release</url>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>spring-milestone</id>
+			<url>https://repo.spring.io/libs-release</url>
+		</pluginRepository>
+	</pluginRepositories>
 </project>
